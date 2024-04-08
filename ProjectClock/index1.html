@@ -1,0 +1,94 @@
+<!-- Digital Clock -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+  body {
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+h1 {
+  font-size: 100px;
+  color: white;
+  margin-bottom: 0px;
+  
+}
+
+h2 {
+  margin-bottom: 0px; 
+
+}
+
+h3 {
+  font-size: 40px;
+  color: white;
+  margin-bottom:0px;
+}
+
+
+        
+    </style>
+</head>
+<body onload="showTime()">
+    <h1></h1>
+    <h2 id="greeting"></h2>
+    <h3 id="date"></h3>
+    <script>
+        function showTime() {
+            var d = new Date();
+
+            var h = d.getHours();
+            var m = d.getMinutes();
+            var s = d.getSeconds();
+            var todaydate = d.toDateString();
+            // This if-else for PM and AM
+            var session;
+            if (h >= 12) {
+                session = "PM";
+            } else {
+                session = "AM";
+            }
+            var greeting = document.getElementById('greeting')
+
+            if (h < 12) {
+                document.body.style.backgroundImage = 'url("morning.jpg")';
+                greeting.innerHTML = "Good Morning";
+            } else if (h < 18) {
+                document.body.style.backgroundImage = 'url("afternoon.png")';
+                greeting.innerHTML = "Good Afternoon";
+            } else {
+                document.body.style.backgroundImage = 'url("night.jpg")';
+                greeting.innerHTML = "Good Evening";
+            }
+
+            // hour jo hai 10 se chota hai to hour ke sath 0 add krna hai 0+h nhi hai to as it is
+            h = h < 10 ? "0" + h : h;
+            m = m < 10 ? "0" + m : m;
+            s = s < 10 ? "0" + s : s;
+
+            var time = h + " : " + m + " : " + s + " " + session; // format created
+            document.getElementsByTagName('h1')[0].innerHTML = time;
+            document.getElementById("date").innerHTML = todaydate;
+
+            setTimeout(showTime, 1000); // khud hi refresh hoga page
+        }
+    </script>
+</body>
+</html>

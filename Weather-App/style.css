@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+body{
+    background-color: #222;
+}
+.card{
+    width: 90%;
+    max-width: 470px;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #fff;
+    margin: 50px auto 0; /* 100px top, 0 buttom and left-right auto*/
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+.search{
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;  /* input box and search logo me bich me space*/
+}
+
+.search input{
+    border : 0;
+    outline : 0;
+    background: #ebfffc;
+    color:#555;
+    padding: 10px 25px;
+    height:60px;
+    border-radius: 30px;
+    flex:1;     /* Each item will have equal width and fill the available space */
+    margin-right: 16px;
+    font-size: 18px;
+}
+
+.search button{
+    border : 0;
+    outline : 0;
+    background: #ebfffc;
+    border-radius: 50%;  /* button circle*/
+    width:60px;
+    height:60px;
+    cursor: pointer;
+}
+
+.search button img {
+    width:16px;  /* buttom img ache se set hogi* search logoki width kam kr di hai*/
+    
+}
+.weather-icon{
+    width:170px;
+    margin-top: 30px;
+}
+.weather h1{
+    font-size: 80px;
+    font-weight:500;
+}
+.weather h1{
+    font-size: 45px;
+    font-weight:400;
+    margin-top: -10px;
+}
+
+.details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding : 0 20px;  /*left to right 20px*/
+    margin-top:50px;    /* humadity and wind ke bich me space hoga*/
+}
+
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.col img{
+    width:40px;
+    margin-right: 10px;
+}
+
+.humidity, .wind{
+    font-size: 28px;
+    margin-top : -6px; /*pls check*/
+}
+
+.weather{
+    display: none;  /*  display non only show input and search box   */
+}
+.error{
+    text-align: left;
+    margin-left :10px;
+    font-size: 14px;
+    margin-top:10px;
+    display:none; /*it;s hidden*/
+}

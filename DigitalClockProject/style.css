@@ -1,0 +1,58 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+body {
+    font-family: "Quicksand", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    color: white;
+  }
+  
+  h1 {
+    font-size: 100px;
+    color: white;
+    margin-bottom: 0px;
+    
+  }
+  
+  h2 {
+    margin-bottom: 0px; 
+  
+  }
+  
+  h3 {
+    font-size: 40px;
+    color: white;
+    margin-bottom:0px;
+  }
+
+
+  
+  /* Media Queries */
+@media (max-width: 768px) {
+  /* Styles for screens up to 768px wide (e.g., tablets) */
+  h1 {
+      font-size: 60px;
+  }
+
+  h3 {
+      font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Styles for screens up to 480px wide (e.g., mobile devices) */
+  h1 {
+      font-size: 40px;
+  }
+
+  h3 {
+      font-size: 20px;
+  }
+}
